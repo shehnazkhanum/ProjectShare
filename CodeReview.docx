@@ -1,0 +1,21 @@
+No unit test cases !
+
+1. CreateImport.java and AppendImport.java
+- main method is very complex with too many if/else statements
+- It is not advisable to catch throwable (specific exceptions should be caught)
+- printStackTrace() should not be used instead we should have proper loggers
+- Duplicate code between CreateImport.java and AppendImport.java can be moved to common class and can be reused
+- In the if statements, the string literals have to be on left side (Eg : "-i".equals(args[2]) instead of args[2].equals("-i")) to avoid null pointer exception
+
+2. BioStreamInterface.java
+- Too many lines of code in the class
+- method ActionPerformed does not follow the naming convention camel case
+- method ActionPerformed is complex with many if/else statements
+- some of the if statements can be combined as the code is duplicated or we can use Enums to separate the actions
+- method should not have many exit points (i mean return statements) which leads to confusion
+
+3. BioStreamUtil.java
+- Util classes should not have public constructor
+- Util class should be final
+- some of the methods are very complex with more lines
+- the local variable names should be meaningful
